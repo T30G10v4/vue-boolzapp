@@ -2,15 +2,37 @@
 /*------VARIABLES------*/
 :root {
 
-    --bg-color-primo: blue;
-    --bg-color-secondo: red;
-    --app-height: 90vh;
-    --part-height: 80px;
-
     
+    --app-height: 90vh;
+    --part-height: 100px;
+    
+    --bar-color: #eaeaea;
+    --icon-color: #b1b1b1;
+    --notify-color: #8edafc;
+    --white: white;
+    --contact-active: #e9ebeb;
+
 }
 
 /*------COMMON PARTS------*/
+html {
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+
+    background-color: var(--icon-color);
+
+}
+
+img {
+
+    height: 100%;
+    border-radius: 50%;
+
+}
 
 /*------SPECIFIED PARTS BY ID------*/
 #app {
@@ -18,51 +40,186 @@
     width: 90%;
     height: var(--app-height);
 
-
 }
 
-/*SX COLUMN*/
+/*-----------------------------------------------------------------SX COLUMN*/
 #sx-column {
 
     
     min-height: 100%;
-    border-right: 1px solid grey;
+    border-right: 1px solid var(--icon-color);
 }
 
+/*------------------------------USER*/
 #user {
 
     height: var(--part-height);
     width: 100%;
-    background-color: grey;
+    background-color: var(--bar-color);
 
 }
 
+#user .avatar {
+
+    
+    height: 100%;
+
+}
+
+#user .avatar img {
+
+    
+    margin-right: 1em;
+    
+
+}
+
+#user .avatar .name {
+
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+#user .controls {
+
+    
+    height: 100%;
+
+}
+
+#user .controls * {
+
+    margin-left: 1em;
+    font-size: 3rem;
+    color: grey;
+
+}
+
+
+
+/*------------------------------NOTIFY*/
 #notify {
 
     height: var(--part-height);
     width: 100%;
-    background-color: aqua;
+    background-color: var(--notify-color);
 
 }
 
+#notify .bell {
+
+    color: var(--notify-color);
+    background-color: var(--white);
+    font-size: 4rem;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin-right: 1rem;
+
+
+}
+
+#notify p {
+
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+#notify a {
+
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+/*------------------------------SEARCH*/
 #search {
 
     height: calc(var(--part-height) / 2);
     width: 100%;
-    background-color: rgb(153, 0, 255);
-
+    background-color: var(--white);
+    
 }
 
+#search .contain {
+
+    border: 1px solid var(--icon-color);
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#search .lens {
+
+    font-size: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+#search input {
+
+    width:100%;
+    border: none;
+    font-size: 2rem;
+}
+
+/*------------------------------CONTACTS*/
 #contacts {
 
     height: calc(var(--app-height) - var(--part-height) * 2 - var(--part-height) / 2);
     width: 100%;
-    background-color: rgb(0, 162, 255);
+    
     overflow: auto;
+    background-color: var(--white);
 
 }
 
-/*DX COLUMN*/
+#contacts .contact {
+
+    height: var(--part-height);
+    padding: 1rem;
+
+}
+
+#contacts .contact:hover {
+
+    background-color: var(--contact-active);
+
+}
+
+#contacts .contact-left,
+#contacts .contact-right {
+
+    height: 100%;
+
+}
+
+#contacts .contact-left img {
+
+    margin-right: 1rem;
+
+}
+
+#contacts .contact-left h3 {
+
+    font-size: 2rem;
+    font-weight: bold;
+
+
+}
+
+#contacts .contact-left p,
+#contacts .contact-right p {
+
+    font-size: 1.5rem;
+
+}
+
+/*---------------------------------------------------------------DX COLUMN*/
 #dx-column {
 
     
@@ -70,28 +227,31 @@
     
 }
 
-#contact {
+/*------------------------------CONTACT*/
+#receiver {
 
     height: var(--part-height);
     width: 100%;
-    background-color: grey;
+    background-color: var(--bar-color);
 
 }
 
+/*------------------------------CHAT*/
 #chat {
 
     height: calc(var(--app-height) - var(--part-height) * 2);
     width: 100%;
-    background-color: rgb(212, 53, 53);
+    background-image: url(../img/mine.jpg);
     overflow:auto;
 
 }
 
+/*------------------------------MESSAGE*/
 #message {
 
     height: var(--part-height);
     width: 100%;
-    background-color: grey;
+    background-color: var(--bar-color);
 
 }
 

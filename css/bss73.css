@@ -496,6 +496,12 @@ html {
 
 }
 
+.text-align-end {
+
+  text-align: end;
+
+}
+
 .font-size-10 {
 
   font-size: 1rem;
