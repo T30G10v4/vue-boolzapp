@@ -164,6 +164,7 @@ img {
 #search input {
 
     width:100%;
+    height: 100%;
     border: none;
     font-size: 2rem;
 }
@@ -313,5 +314,22 @@ img {
     width: 100%;
     background-color: var(--bar-color);
 
+}
+
+#message i {
+
+    font-size: 3rem;
+    color: var(--icon-color)
+
+}
+
+#message input {
+
+    display: inline-block;
+    width: 100%;
+    margin: 0 4rem;
+    height: 100%;
+    border:none;
+    padding-left: 1rem;
 }
 
