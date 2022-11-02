@@ -11,6 +11,7 @@
     --notify-color: #8edafc;
     --white: white;
     --contact-active: #e9ebeb;
+    --message-color: #d5f9ba;
 
 }
 
@@ -233,6 +234,41 @@ img {
     height: var(--part-height);
     width: 100%;
     background-color: var(--bar-color);
+    padding: 1rem;
+
+}
+
+#receiver .left img {
+
+    margin-right: 1em;
+
+}
+
+#receiver .left h3 {
+
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+#receiver .left p {
+
+    font-size: 1.5rem;
+
+}
+
+#receiver .right * {
+
+    margin-left: 1em;
+    font-size: 3rem;
+    color: grey;
+
+}
+
+#receiver .left,
+#receiver .right {
+
+    height: 100%;
 
 }
 
@@ -243,6 +279,30 @@ img {
     width: 100%;
     background-image: url(../img/mine.jpg);
     overflow:auto;
+
+}
+
+.message-sent,
+.message-received {
+
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.message-sent {
+
+    background-color: var(--message-color);
+
+}
+
+.message-received {
+
+    background-color: var(--white);
 
 }
 
