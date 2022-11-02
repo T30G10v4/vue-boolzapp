@@ -4,6 +4,8 @@
 
     --bg-color-primo: blue;
     --bg-color-secondo: red;
+    --app-height: 90vh;
+    --part-height: 80px;
 
     
 }
@@ -11,14 +13,85 @@
 /*------COMMON PARTS------*/
 
 /*------SPECIFIED PARTS BY ID------*/
-.red {
+#app {
 
-    color: var(--bg-color-secondo);
+    width: 90%;
+    height: var(--app-height);
+
+
+}
+
+/*SX COLUMN*/
+#sx-column {
+
+    
+    min-height: 100%;
+    border-right: 1px solid grey;
+}
+
+#user {
+
+    height: var(--part-height);
+    width: 100%;
+    background-color: grey;
 
 }
 
-.blue {
+#notify {
 
-    color: var(--bg-color-primo);
+    height: var(--part-height);
+    width: 100%;
+    background-color: aqua;
 
 }
+
+#search {
+
+    height: calc(var(--part-height) / 2);
+    width: 100%;
+    background-color: rgb(153, 0, 255);
+
+}
+
+#contacts {
+
+    height: calc(var(--app-height) - var(--part-height) * 2 - var(--part-height) / 2);
+    width: 100%;
+    background-color: rgb(0, 162, 255);
+    overflow: auto;
+
+}
+
+/*DX COLUMN*/
+#dx-column {
+
+    
+    min-height: 100%;
+    
+}
+
+#contact {
+
+    height: var(--part-height);
+    width: 100%;
+    background-color: grey;
+
+}
+
+#chat {
+
+    height: calc(var(--app-height) - var(--part-height) * 2);
+    width: 100%;
+    background-color: rgb(212, 53, 53);
+    overflow:auto;
+
+}
+
+#message {
+
+    height: var(--part-height);
+    width: 100%;
+    background-color: grey;
+
+}
+
