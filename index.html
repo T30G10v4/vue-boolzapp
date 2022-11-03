@@ -25,6 +25,8 @@
   <!-- JS SCRIPT -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.min.js"></script>
+
 
   <title>BOOLZAPP</title>
 </head>
@@ -114,7 +116,8 @@
             <div v-if="message.status === 'sent'">
 
               <div class="sent">
-                <div class="message-sent">{{message.message}}</div>
+                <div class="message-sent">{{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
+                
               </div>
 
             </div>
@@ -122,7 +125,8 @@
             <div v-else="message.status !== 'sent'">
 
               <div class="received">
-                <div class="message-received">{{message.message}}</div>
+                <div class="message-received">{{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
+                
               </div>
 
             </div>

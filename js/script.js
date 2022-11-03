@@ -1,3 +1,5 @@
+const dt = luxon.DateTime;
+
 const { createApp } = Vue;
 
 createApp ({
@@ -7,8 +9,7 @@ createApp ({
         return {
             
             activeContact: 0,
-            msg: "",
-            
+            msg: "",            
             contacts: [
                 {
                     name: 'Michele',
@@ -186,9 +187,11 @@ createApp ({
 
         sendMessage : function() {
 
+            const now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+            
             const message = 
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: now,
                     message: this.msg,
                     status: 'sent'
                 };
@@ -203,9 +206,11 @@ createApp ({
 
             this.msg="Ok...";
 
+            const now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+
             const message = 
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: now,
                     message: this.msg,
                     status: 'received'
                 };
