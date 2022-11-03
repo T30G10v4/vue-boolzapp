@@ -7,6 +7,7 @@ createApp ({
         return {
             
             activeContact: 0,
+            msg: "",
             
             contacts: [
                 {
@@ -176,10 +177,42 @@ createApp ({
 
     methods : {
 
-        prova : function(index) {
+        setActiveContact : function(index) {
 
             this.activeContact = index;
             console.log(this.activeContact);
+
+        },
+
+        sendMessage : function() {
+
+            const message = 
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: this.msg,
+                    status: 'sent'
+                };
+
+            this.contacts[this.activeContact].messages.push(message);
+
+            setTimeout(this.chatResponse, 1000);    
+            
+        },
+
+        chatResponse : function() {
+
+            this.msg="Ok...";
+
+            const message = 
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: this.msg,
+                    status: 'received'
+                };
+
+            this.contacts[this.activeContact].messages.push(message);
+
+            this.msg="";
 
         }
 

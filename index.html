@@ -75,7 +75,7 @@
           </div>
         </div> -->
         
-        <div @click="prova(index)" v-for="(contact, index) in contacts" class="contact flex-row-spc-btwn-start">
+        <div @click="setActiveContact(index)" v-for="(contact, index) in contacts" class="contact flex-row-spc-btwn-start">
           <div class="contact-left flex-row-start-start"> 
             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
             <div class="text">
@@ -134,7 +134,11 @@
 
       <div id="message" class="p-2rem flex-row-spc-btwn-center">
         <i class="fa-regular fa-face-smile"></i>
-        <input type="text" placeholder="Scrivi un messaggio">
+        <input 
+          type="text" 
+          placeholder="Scrivi un messaggio"
+          v-model="msg"
+          v-on:keyup.enter="sendMessage()">
         <i class="fa-solid fa-microphone"></i>
       </div>
 
