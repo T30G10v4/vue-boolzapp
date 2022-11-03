@@ -283,6 +283,19 @@ img {
 
 }
 
+.sent,
+.received {
+
+    padding-bottom: 1rem;
+
+}
+
+.sent {
+
+    text-align: end;
+
+}
+
 .message-sent,
 .message-received {
 
@@ -297,6 +310,7 @@ img {
 
 .message-sent {
 
+    text-align: start;
     background-color: var(--message-color);
 
 }
