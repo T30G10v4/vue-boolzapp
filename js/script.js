@@ -9,7 +9,8 @@ createApp ({
         return {
             
             activeContact: 0,
-            msg: "",            
+            msg: "",
+            search: "",        
             contacts: [
                 {
                     name: 'Michele',

@@ -59,7 +59,11 @@
       <div id="search" class="p-1em">
         <div class="contain flex-row-start-center">
           <i class="lens fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input 
+            type="text" 
+            placeholder="Cerca o inizia una nuova chat"
+            v-model="search"  
+          >
         </div>
       </div>
       <div id="contacts">
@@ -112,25 +116,10 @@
 
       <div id="chat" class="p-1rem">
         
-          <div v-for="(message, index) in contacts[activeContact].messages">
-            <div v-if="message.status === 'sent'">
-
-              <div class="sent">
-                <div class="message-sent">{{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
+          <div v-for="(message, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'message-sent' : 'message-received'">
+            {{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
                 
-              </div>
-
-            </div>
-
-            <div v-else="message.status !== 'sent'">
-
-              <div class="received">
-                <div class="message-received">{{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
-                
-              </div>
-
-            </div>
-          </div>
+          
 
          
         

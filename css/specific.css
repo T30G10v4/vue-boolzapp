@@ -280,31 +280,22 @@ img {
     width: 100%;
     background-image: url(../img/mine.jpg);
     overflow:auto;
-
-}
-
-.sent,
-.received {
-
-    padding-bottom: 1rem;
-
-}
-
-.sent {
-
-    text-align: end;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .message-sent,
 .message-received {
 
-    display: inline-block;
+ 
     padding: 1rem;
     border-radius: 10px;
-    max-width: 50%;
+    max-width: 60%;
+    min-width: 30%;
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 
 }
 
@@ -312,13 +303,14 @@ img {
 
     text-align: start;
     background-color: var(--message-color);
+    align-self: flex-end;
 
 }
 
 .message-received {
 
     background-color: var(--white);
-
+    align-self: flex-start;
 }
 
 #chat .date {
