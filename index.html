@@ -81,7 +81,7 @@
           </div>
         </div> -->
         
-        <div @click="setActiveContact(index)" v-for="(contact, index) in contacts" class="contact flex-row-spc-btwn-start">
+        <div @click="setActiveContact(index)" v-for="(contact, index) in contacts" :class="contact.name.toLowerCase().includes(search) ? 'contact flex-row-spc-btwn-start' : 'display-none'">
           <div class="contact-left flex-row-start-start"> 
             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
             <div class="text">
@@ -90,7 +90,7 @@
             </div>
           </div> 
           <div class="contact-right">
-            <p>12:00</p>
+            <p>{{lastMessageDate(index)}}</p>
           </div>
         </div>
       </div>
@@ -117,12 +117,7 @@
       <div id="chat" class="p-1rem">
         
           <div v-for="(message, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'message-sent' : 'message-received'">
-            {{message.message}}<div class="date text-align-end">{{message.date}}</div></div>
-                
-          
-
-         
-        
+            {{message.message}}<div class="date text-align-end">{{message.date}}</div></div> 
       </div>
 
       <div id="message" class="p-2rem flex-row-spc-btwn-center">
@@ -142,10 +137,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

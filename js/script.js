@@ -182,7 +182,7 @@ createApp ({
         setActiveContact : function(index) {
 
             this.activeContact = index;
-            console.log(this.activeContact);
+            
 
         },
 
@@ -219,6 +219,28 @@ createApp ({
             this.contacts[this.activeContact].messages.push(message);
 
             this.msg="";
+
+        },
+
+        lastMessageDate : function(index) {
+
+            let i = this.contacts[index].messages.length-1;
+            
+            console.log(i);
+
+            for(;i>=0;i--)
+            {
+
+                if(this.contacts[index].messages[i].status === 'received')
+                {
+
+                    return this.contacts[index].messages[i].date;
+
+                }
+
+            }
+            
+            
 
         }
 
